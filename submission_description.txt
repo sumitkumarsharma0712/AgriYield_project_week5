@@ -1,0 +1,11 @@
+Report description (Week 4 – Predictive Modeling Framework)
+
+This report presents a complete predictive modeling framework, named AgriYield, for forecasting agricultural yields and other agribusiness performance metrics. It begins with the rationale for predictive modeling in crop-yield forecasting and resource optimisation, explaining how forecasts support decisions on fertiliser, irrigation, procurement, logistics, credit and insurance.
+
+The report then identifies and justifies the data features that influence yield: weather (rainfall, dry spells, heat at flowering), soil (pH, organic carbon, N-P-K, water holding), crop management (irrigation, fertiliser, sowing date, variety, pests), satellite NDVI and yield history. It explains the agronomic reasoning, the data sources in India, and how forecast-origin timing prevents data leakage. A feature-engineering section describes lag features, heat-stress and water-supply indices and the temperature-humidity index.
+
+The model training process covers a chronological train/test split, forward-chaining cross-validation, imputation and encoding inside the pipeline, randomised hyperparameter search, naive baselines, an ensemble, and champion selection on cross-validation rather than test data. Ridge, Random Forest, Extra Trees and Gradient Boosting are implemented, and XGBoost/LightGBM, hierarchical Bayesian models, LSTM/TFT and satellite CNNs are discussed as extensions.
+
+Reliability is addressed through RMSE, MAE, MAPE, R2, bias, skill score versus baselines, error slicing by crop/district/year, conformal 90% prediction intervals, permutation importance, feature-group ablation, leave-district-out validation and PSI drift monitoring. On simulated data the champion model reaches R2 = 0.941 (RMSE 2.03 q/ha, MAPE 7.9%), a 55% error reduction over the naive forecast. The report openly discusses its weaknesses: slight under-forecasting under input drift and 86% interval coverage.
+
+Universality is demonstrated by applying the same code, with only a configuration change, to monthly dairy milk yield (R2 = 0.965), and by mapping the framework to price, input-demand, poultry, cold-chain and credit-risk problems. The accompanying Python project (modular code, 7 unit tests, README) reproduces every result. The data are simulated, which the report states clearly.

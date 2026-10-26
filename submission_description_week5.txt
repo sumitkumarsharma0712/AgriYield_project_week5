@@ -1,0 +1,11 @@
+Report description (Week 5 – Model Evaluation and Reporting Strategy)
+
+This report sets out a complete strategy for evaluating a predictive model and communicating the findings to agribusiness stakeholders. It is demonstrated on working models from my Week 4 project: a district-level crop-yield forecasting model and a farm-level dairy milk model, both evaluated on hidden test periods with a new Python package (agrieval).
+
+Performance metrics: the report defines and interprets RMSE, MAE, MAPE, WAPE, R-squared, bias and MASE, and explains their strengths and pitfalls. It adds decision-oriented metrics (share of forecasts within +/-10%, skill score against a simple "same as last season" rule, asymmetric planning cost, shortfall early-warning precision and recall) and uncertainty metrics (coverage of the 90% range, interval score, calibration). Confidence ranges come from a cluster bootstrap, and a paired test shows the model's advantage is not due to chance.
+
+Visualisation plan: ten stakeholder-friendly charts are specified and produced, each carrying one message, with plain-language titles, colour-blind-safe colours plus text labels, reference lines and baselines. They include a traffic-light report card, actual-versus-forecast with a "usable" band, over/under-forecast by year, best and hardest cases, shortfall warning, planning cost and range reliability. Each is accompanied by "how to read it" guidance for non-experts.
+
+Executive reporting: a three-layer model (one-page summary, stakeholder briefing, technical appendix), a summary template, a jargon-to-plain-language translation table, cadence and presentation guidelines, and a worked example.
+
+Findings, limitations and refinement: the crop model is rated AMBER: 7.9% typical error, 55% fewer errors than the simple rule, 82% of shortfall seasons anticipated, but a 6.4% low bias and a 90% range that covered only 86% of outcomes (rice 64%, wheat 74%). The dairy model is GREEN. The report converts these into prioritised recommendations, states the limitations (simulated data, short test window, assumed cost weights) and gives a refinement and monitoring roadmap. The accompanying project contains the code, 17 unit tests and all outputs.

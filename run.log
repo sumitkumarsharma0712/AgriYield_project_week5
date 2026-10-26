@@ -1,0 +1,18 @@
+[crop_yield] rows=1360 (warm-up rows dropped=160), entities=80, features: 28 numeric + 2 categorical
+[crop_yield] dev periods [2008, 2021] (n=1120), test periods [2022, 2024] (n=240)
+[crop_yield] tuned Ridge              CV-RMSE=0.2849 (0.9s)
+[crop_yield] tuned Random Forest      CV-RMSE=0.2668 (38.8s)
+[crop_yield] tuned Extra Trees        CV-RMSE=0.2527 (21.6s)
+[crop_yield] tuned Gradient Boosting  CV-RMSE=0.2536 (32.6s)
+[crop_yield] selected model (lowest CV RMSE): Ensemble (RF+ET+GB)
+[crop_yield] done in 181.5s -> /home/claude/agri-yield-forecasting/results/crop_yield
+[dairy_milk] rows=2760 (warm-up rows dropped=120), entities=40, features: 23 numeric + 3 categorical
+[dairy_milk] dev periods [4, 60] (n=2280), test periods [61, 72] (n=480)
+[dairy_milk] tuned Ridge              CV-RMSE=1.1017 (1.0s)
+[dairy_milk] tuned Random Forest      CV-RMSE=1.0981 (72.1s)
+[dairy_milk] tuned Extra Trees        CV-RMSE=1.0826 (37.5s)
+[dairy_milk] tuned Gradient Boosting  CV-RMSE=1.0840 (37.7s)
+[dairy_milk] selected model (lowest CV RMSE): Ensemble (RF+ET+GB)
+[dairy_milk] done in 266.5s -> /home/claude/agri-yield-forecasting/results/dairy_milk
+
+Finished. Results in: /home/claude/agri-yield-forecasting/results
